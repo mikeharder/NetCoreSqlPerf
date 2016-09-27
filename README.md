@@ -13,5 +13,6 @@
     ```
 
 3. Edit `project.json` to select the desired version of EF
-4. `dotnet run -c release -- [SqlDataReader|EF|EFSingleTable]`
+4. `dotnet restore`
+5. `dotnet run -c release -- [SqlDataReader|EF|EFSingleTable]`
  1. SQL tables will be created and populated when app is first run
