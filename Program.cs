@@ -41,23 +41,16 @@ namespace ConsoleApplication
             WriteResults();
 #pragma warning disable CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
 
-            var showHelp = true;
             if (args.Any(a => a.Equals("SqlDataReader", StringComparison.OrdinalIgnoreCase))) {
                 Test(TestSqlDataReader);
-                showHelp = false;
             }
-
-            if (args.Any(a => a.Equals("EF", StringComparison.OrdinalIgnoreCase))) {
+            else if (args.Any(a => a.Equals("EF", StringComparison.OrdinalIgnoreCase))) {
                 Test(TestEf);
-                showHelp = false;
             }
-
-            if (args.Any(a => a.Equals("EFSingleTable", StringComparison.OrdinalIgnoreCase))) {
+            else if (args.Any(a => a.Equals("EFSingleTable", StringComparison.OrdinalIgnoreCase))) {
                 Test(TestEfSingleTable);
-                showHelp = false;
             }
-
-            if (showHelp) {
+            else {
                 Console.WriteLine("sql.exe [SqlDataReader|EF|EFSingleTable]");
             }
         }
