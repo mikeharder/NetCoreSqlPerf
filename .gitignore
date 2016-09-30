@@ -1,6 +1,10 @@
+.vs
+.vscode
+
 bin
 obj
-.vscode
 
 appsettings.json
 project.lock.json
+
+*.xproj.user
